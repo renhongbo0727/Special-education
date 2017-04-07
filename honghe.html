@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<link href="css/style.css" rel="stylesheet" />
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=k8jCcRcKrKnrdEBIOR5wYGdA"></script>
+	<script type="text/javascript">
+	        //创建和初始化地图函数：
+        function initMap(id,x,y,tip) {
+            var map = new BMap.Map(id);//创建Map
+            
+        	
+            map.centerAndZoom(new BMap.Point(x,y),18);//经纬度和缩放级别   缩放级别越大  越详细
+           
+           map.enableScrollWheelZoom();
+			
+            var point = new BMap.Point(x,y);//创建一个Point
+            var iconImg = icon = new BMap.Icon("images/green.png", new BMap.Size(16, 16));//创建一个Icon
+            var marker = new BMap.Marker(point, { icon: iconImg });//创建一个Marker 
+            var label = new BMap.Label(tip, { "offset": new BMap.Size(16, 0) });//创建一个Label
+            marker.setLabel(label);//绑定Label到Marker
+            map.addOverlay(marker);//添加覆盖层
+            label.setStyle({
+                borderColor: "#808080",
+                color: "#333",
+                cursor: "pointer",
+            });//设置Label样式
+			
+
+        }
+        
+        window.onload=function(){
+        initMap("map1","102.7222200000","25.0395420000","融大教育总部 0871-65238043");
+    	
+    	
+		
+    	};
+    </script>
+	</head>
+	<body>
+		<div class="banner">
+			<div class="bannerC"><a href="http://www.yancaozp.com/zt.asp?lid=3" target="_blank"></a></div>
+		</div>
+		<div class="title">
+			<h2>融大教育烟草培训简介</h2>
+			<a></a>
+		</div>
+		<div class="aboutus">
+			<div class="aboutusC">
+				<img src="images/pic.jpg" />
+				<div class="profile">
+					<h3>CONTACT  US</h3>
+					<h3>关于我们</h3>
+					<p>融大教育——全国唯一专业从事烟草招聘考试职前培训机构。</p>
+					<p>自2010年以来秉承着打造烟草行业培训及服务先锋的理念，紧扣红云红河集团招聘考试范围，通过专业的课程体系研发研发，
+					严谨的实战教学培训，复旦、人大、上交、清华一流的师资引进教学，课程咨询、讲师、助教、后勤保障四位一体跟踪服务
+					成功的帮助考生实现了自己烟草人的梦想。同时也大大提升了烟草行业工作者的技能水平和专业知识素养。</p>
+				</div>
+			</div>
+		</div>
+		<div class="title">
+			<h2>融大教育红云红河招聘师资简介</h2>
+			<a></a>
+		</div>
+		<div class="shizijj">
+			<p><a>100%</a>来自清华、上交、复旦、人大、浙大等国内一流名校；</p>
+			<p><a>100%</a>具有相关专业硕士以上学历；</p>
+			<p><a>100%</a>资深烟草培训专家，具有丰富的教学研究和考试培训经验。</p>
+		</div>
+		<div class="shizi">
+			<div class="shiziC">
+				<ul>
+					<li>
+						<img src="images/one.png" />
+						<h3>行测：</h3>
+						<p>梁老师、许老师（行测权威辅导专家）</p>
+					</li>
+					<li>
+						<img src="images/two.png" />
+						<h3>公文写作：</h3>
+						<p>秦老师（人民大学，博士）</p>
+					</li>
+					<li>
+						<img src="images/three.png" />
+						<h3>经济学综合：</h3>
+						<p>陈老师等（北京大学，博士）</p>
+					</li>
+					<li>
+						<img src="images/four.png" />
+						<h3>管理学综合：</h3>
+						<p>袁老师等（人民大学，博士）</p>
+					</li>
+					<li>
+						<img src="images/five.png" />
+						<h3>法律综合：</h3>
+						<p>赵老师（北京大学，硕士）</p>
+					</li>
+					<li>
+						<img src="images/six.png" />
+						<h3>烟草知识：</h3>
+						<p>毛老师（人民大学，博士）</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="title">
+			<h2>红云红河招聘考试考情分析</h2>
+			<a></a>
+		</div>
+		<div class="tab01">
+			<table>
+				<tr>
+					<th width="20%" class="red">类别</th>
+					<th width="10%">2009年</th>
+					<th width="10%">2010年</th>
+					<th width="10%">2011年</th>
+					<th width="10%">2012年</th>
+					<th width="10%">2013年</th>
+					<th width="10%">2014年</th>
+					<th width="10%">2015年</th>
+					<th width="10%">2016年</th>
+				</tr>
+				<tr>
+					<td>总部</td>
+					<td>30</td>
+					<td>5</td>
+					<td>44</td>
+					<td>15</td>
+					<td>19</td>
+					<td>9</td>
+					<td>12</td>
+					<td>--</td>
+				</tr>
+				<tr>
+					<td class="grey">昆明烟厂</td>
+					<td class="grey">30</td>
+					<td class="grey">24</td>
+					<td class="grey">31</td>
+					<td class="grey">50</td>
+					<td class="grey">55</td>
+					<td class="grey">67</td>
+					<td class="grey">58</td>
+					<td class="grey">66</td>
+				</tr>
+				<tr>
+					<td>曲靖烟厂</td>
+					<td>23</td>
+					<td>0</td>
+					<td>32</td>
+					<td>38</td>
+					<td>47</td>
+					<td>49</td>
+					<td>50</td>
+					<td>46</td>
+				</tr>
+				<tr>
+					<td class="grey">红河烟厂</td>
+					<td class="grey">8</td>
+					<td class="grey">12</td>
+					<td class="grey">29</td>
+					<td class="grey">34</td>
+					<td class="grey">64</td>
+					<td class="grey">75</td>
+					<td class="grey">62</td>
+					<td class="grey">77</td>
+				</tr>
+				<tr>
+					<td>会泽烟厂</td>
+					<td>5</td>
+					<td>5</td>
+					<td>25</td>
+					<td>22</td>
+					<td>23</td>
+					<td>22</td>
+					<td>23</td>
+					<td>28</td>
+				</tr>
+				<tr>
+					<td class="grey">新疆烟厂</td>
+					<td class="grey">22</td>
+					<td class="grey">40</td>
+					<td class="grey">54</td>
+					<td class="grey">49</td>
+					<td class="grey">35</td>
+					<td class="grey">33</td>
+					<td class="grey">16</td>
+					<td class="grey">13</td>
+				</tr>
+				<tr>
+					<td>内蒙古烟厂</td>
+					<td>32</td>
+					<td>5</td>
+					<td>13</td>
+					<td>14</td>
+					<td>20</td>
+					<td>27</td>
+					<td>17</td>
+					<td>17</td>
+				</tr>
+				<tr>
+					<td class="grey">合计</td>
+					<td class="grey">150</td>
+					<td class="grey">91</td>
+					<td class="grey">228</td>
+					<td class="grey">222</td>
+					<td class="grey">263</td>
+					<td class="grey">282</td>
+					<td class="grey">238</td>
+					<td class="grey">247</td>
+				</tr>
+			</table>
+		</div>
+		<div class="tab01">
+			<table>
+				<tr>
+					<th width="20%" class="red">大类</th>
+					<th width="80%">专业</th>
+				</tr>
+				<tr>
+					<td>机械类</td>
+					<td>机械工程、机械制造及设计、机械自动化、热能与动力工程、工程力学、工业设计</td>
+				</tr>
+				<tr>
+					<td class="grey">电子电器类</td>
+					<td class="grey">电气工程与自动化、电气信息工程、自动化控制、电气自动化、过程分析与控制</td>
+				</tr>
+				<tr>
+					<td>财务统计类</td>
+					<td>财务管理、审计学、统计学 、会计学</td>
+				</tr>
+				<tr>
+					<td class="grey">计算机类</td>
+					<td class="grey">计算机科学与技术、计算机、信息技术、网络工程、电子科学与技术</td>
+				</tr>
+				<tr>
+					<td>化学</td>
+					<td>化学、应用化、分析化学、有机化学、生物化学、生命科学 、生物、食品质量安全、化工工艺</td>
+				</tr>
+				<tr>
+					<td class="grey">烟草农学</td>
+					<td class="grey">烟草工艺（工程）、烟草学、烟草农艺 、烟草工程、烟草工程</td>
+				</tr>
+				<tr height="60px">
+					<td>经济与管理类</td>
+					<td>企业管理、行政管理、工商管理、经济管理、经济管理、经济学、人力资源管理、金融学、
+国际经济与贸易 、市场营销</td>
+				</tr>
+				<tr height="60px">
+					<td class="grey">其他</td>
+					<td class="grey">新闻传媒 、英语 、汉语言文学、电子商务、包装设计、播音主持、文艺、体育、法学、工业与民用建筑、
+安全工程、工程造价、物流、文秘、运动训练、给排水、园林、表演等</td>
+				</tr>
+			</table>
+		</div>
+		<div class="fenxi">
+			<div class="title">
+				<h2>红云红河招聘考试考情分析</h2>
+				<a></a>
+			</div>
+			<div class="fenxiList">
+				<ul>
+					<li><a href="http://www.yancaozp.com/news.asp?lid=3&sortid=9" target="_blank">红云红河集团2017年招聘简章</a></li>
+					<li><a href="http://www.yancaozp.com/newsdetail.asp?id=3412" target="_blank">红云红河集团2012年招聘简章</a></li>
+					<li><a href="http://www.yancaozp.com/newsdetail.asp?id=9887" target="_blank">红云红河集团2016年招聘简章</a></li>
+					<li><a href="http://www.yancaozp.com/news.asp?lid=3&sortid=9" target="_blank">红云红河集团2011年招聘简章</a></li>
+					<li><a href="http://www.yancaozp.com/newsdetail.asp?id=7007" target="_blank">红云红河集团2015年招聘简章</a></li>
+					<li><a href="http://www.yancaozp.com/newsdetail.asp?id=901" target="_blank">红云红河集团2010年招聘简章</a></li>
+					<li><a href="http://www.yancaozp.com/newsdetail.asp?id=4280" target="_blank">红云红河集团2014年招聘简章</a></li>
+					<li><a href="http://www.yancaozp.com/newsdetail.asp?id=2410" target="_blank">红云红河集团2009年招聘简章</a></li>
+					<li><a href="http://www.yancaozp.com/newsdetail.asp?id=2532" target="_blank">红云红河集团2013年招聘简章</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="title">
+			<h2>2016红云红河集团烟草培训成绩展</h2>
+			<a></a>
+		</div>
+		<div class="zhan">
+			<div class="zhanLeft">
+				<div class="title">
+					<h3>2016年</h3>
+				</div>
+				<p>融大教育<a>67</a>名学员参加红云红河考试，<a>59</a>人进面试，笔试<span>过关率高达</span><a>88%</a></p>
+			</div>
+			<div class="zhanLeft zhanCenter">
+				<h2>烟草培训<br />成绩展</h2>
+			</div>
+			<div class="zhanLeft zhanRight">
+				<div class="title">
+					<h3>2016年</h3>
+				</div>
+				<p>融大教育红云红河面授班专业知识点平均<span>命中率</span><a>88%</a>，综合知识原题<span>命中率</span><a>77%</a>知识点全面覆盖。</p>
+			</div>
+		</div>
+		<div class="xieyi">
+			<div class="title">
+				<h2>红云红河2017年招聘课程展示</h2>
+				<a></a>
+				<p>红云红河集团招聘考试——协议系列</p>
+			</div>
+			<div class="xieyiC">
+				<div class="tese">
+					<h4>课程特色</h4>
+					<ul>
+						<li>1、笔试、面试协议通过</li>
+						<li>2、六年专业教研，紧扣红云红河集团近年考试范围，独家解析命题规律，最懂烟草考试、最懂学员需求</li>
+						<li>3、独家开设晚自习辅导，班主任、助教、后勤保障全程追踪服务，时时进行培训效果测评和考试</li>
+						<li>4、开设真题精讲班、现场一对二班、全真模考班，针对性提高</li>
+						<li>5、开班期间每天课程答疑服务</li>
+						<li>6、搭配网络课程，自己在家也能上名师学堂，24小时不打烊</li>
+					</ul>
+					<table>
+						<tr>
+							<th width="12%" class="red">类别</th>
+							<th width="15%" class="orange">科目</th>
+							<th width="25%">核心师资</th>
+							<th width="12%">学时（天）</th>
+							<th width="12%">价位</th>
+							<th width="12%">上课时间</th>
+							<th width="12%">立即报名</th>
+						</tr>
+						<tr>
+							<td>钻石协议班</td>
+							<td rowspan="8" class="center">
+								一、行政职业能力测试<br/>
+								二、法律综合<br/>
+								三、经济学综合<br/>
+								四、管理学综合<br/>
+								五、公文写作<br/>
+								六、烟草知识及相关法律 
+							<td rowspan="8" class="center">
+								1、行测：梁老师、许老师<br/>
+								     （行测权威辅导专家）<br/>
+								2、公文写作：秦老师<br/>
+								     （人民大学，博士）<br/>
+								3、经济学综合：陈老师等<br/>
+								     （北京大学，博士）<br/>
+								4、管理学综合：袁老师等<br/>
+								     （人民大学，博士）<br/>
+								5、法律综合：赵老师<br/>
+								     （北京大学，硕士）<br/>
+								6、烟草知识：毛老师<br/>
+								    （人民大学，博士）
+							</td>
+							<td>>60</td>
+							<td class="xunBtn">详见协议</td>
+							<td>7月23日<br />9月30日<br />11月28日</td>
+							<td><a href="http://www.yancaozp.com/bm.asp" target="_blank">立即报名</a><a target=blank href=tencent://message/?uin=800070805&Site=名称&Menu=yes>我要咨询</a></td>
+						</tr>
+						<tr>
+							<td class="grey">金卡协议班</td>
+							<td class="grey">>50</td>
+							<td class="grey xunBtn">详见协议</td>
+							<td class="grey">同上</td>
+							<td class="grey"><a href="http://www.yancaozp.com/bm.asp" target="_blank">立即报名</a><a target=blank href=tencent://message/?uin=800070805&Site=名称&Menu=yes>我要咨询</a></td>
+						</tr>
+						<tr>
+							<td>真题精讲班</td>
+							<td>3</td>
+							<td class="xunBtn" rowspan="3" style="color:#f00;">隶属协议班不可单报</td>
+							<td>同上</td>
+							<td><a href="http://www.yancaozp.com/bm.asp" target="_blank">立即报名</a><a target=blank href=tencent://message/?uin=800070805&Site=名称&Menu=yes>我要咨询</a></td>
+						</tr>
+						<tr>
+							<td class="grey">现场一对二班</td>
+							<td class="grey">3</td>
+							<td class="grey">同上</td>
+							<td class="grey"><a href="http://www.yancaozp.com/bm.asp" target="_blank">立即报名</a><a target=blank href=tencent://message/?uin=800070805&Site=名称&Menu=yes>我要咨询</a></td>
+						</tr>
+						<tr>
+							<td>全真模考班</td>
+							<td>3</td>
+							<td>1月7日</td>
+							<td><a href="http://www.yancaozp.com/bm.asp" target="_blank">立即报名</a><a target=blank href=tencent://message/?uin=800070805&Site=名称&Menu=yes>我要咨询</a></td>
+						</tr>				
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--协议班结束-->
+		<div class="xieyi changgui">
+			<div class="title">
+				<h2>红云红河2017年招聘课程展示</h2>
+				<a></a>
+				<p>红云红河集团招聘考试——常规系列</p>
+			</div>
+			<div class="xieyiC">
+				<div class="tese">
+					<h4>课程特色</h4>
+					<ul>
+						<li>1、笔试、面试协议通过</li>
+						<li>2、六年专业教研，紧扣红云红河集团近年考试范围，独家解析命题规律，最懂烟草考试、最懂学员需求</li>
+						<li>3、独家开设晚自习辅导，班主任、助教、后勤保障全程追踪服务，时时进行培训效果测评和考试</li>
+						<li>4、开设真题精讲班、现场一对二班、全真模考班，针对性提高</li>
+						<li>5、开班期间每天课程答疑服务</li>
+						<li>6、搭配网络课程，自己在家也能上名师学堂，24小时不打烊</li>
+					</ul>
+					<table>
+						<tr>
+							<th width="12%" class="red">类别</th>
+							<th width="15%" class="orange">科目</th>
+							<th width="25%">核心师资</th>
+							<th width="12%">学时（天）</th>
+							<th width="12%">价位</th>
+							<th width="12%">上课时间</th>
+							<th width="12%">立即报名</th>
+						</tr>
+						<tr>
+							<td>两期+冲刺班</td>
+							<td rowspan="8" class="center">
+								一、行政职业能力测试<br/>
+								二、法律综合<br/>
+								三、经济学综合<br/>
+								四、管理学综合<br/>
+								五、公文写作<br/>
+								六、烟草知识及相关法律 
+							<td rowspan="8" class="center">
+								1、行测：梁老师、许老师<br/>
+								     <a>（行测权威辅导专家）</a>
+								2、公文写作：秦老师<br/>
+								     <a>（人民大学，博士）</a>
+								3、经济学综合：陈老师等<br/>
+								     <a>（北京大学，博士）</a>
+								4、管理学综合：袁老师等<br/>
+								     <a>（人民大学，博士）</a>
+								5、法律综合：赵老师<br/>
+								     <a>（北京大学，硕士）</a>
+								6、烟草知识：毛老师<br/>
+								    <a>（人民大学，博士）</a>
+							</td>
+							<td>50</td>
+							<td class="xunBtn">电询<br />面询</td>
+							<td>9月30日<br />11月28日</td>
+							<td><a href="http://www.yancaozp.com/bm.asp" target="_blank">立即报名</a><a target=blank href=tencent://message/?uin=800070805&Site=名称&Menu=yes>我要咨询</a></td>
+						</tr>
+						<tr>
+							<td class="grey">一期+冲刺班</td>
+							<td class="grey">41</td>
+							<td class="grey xunBtn">电询<br />面询</td>
+							<td class="grey">9月30日<br />11月28日<br />12月29日</td>
+							<td class="grey"><a href="http://www.yancaozp.com/bm.asp" target="_blank">立即报名</a><a target=blank href=tencent://message/?uin=800070805&Site=名称&Menu=yes>我要咨询</a></td>
+						</tr>
+						<tr height="140px;">
+							<td>全程精讲班<br />
+								（第一期）<br />
+								（第二期）<br />
+								（第三期）</td>
+							<td>23</td>
+							<td>电询<br />面询</td>
+							<td>同上</td>
+							<td><a href="http://www.yancaozp.com/bm.asp" target="_blank">立即报名</a><a target=blank href=tencent://message/?uin=800070805&Site=名称&Menu=yes>我要咨询</a></td>
+						</tr>
+						<tr>
+							<td class="grey">考前冲刺班</td>
+							<td class="grey">10</td>
+							<td class="grey">电询<br />面询</td>
+							<td class="grey">1月4日</td>
+							<td class="grey"><a href="http://www.yancaozp.com/bm.asp" target="_blank">立即报名</a><a target=blank href=tencent://message/?uin=800070805&Site=名称&Menu=yes>我要咨询</a></td>
+						</tr>				
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--常规系统结束-->
+		<div class="xieyi wangluo">
+			<div class="title">
+				<h2>红云红河集团备考辅助网络课程</h2>
+				<a></a>
+				<p>课程一览表</p>
+			</div>
+			<div class="xieyiC">
+				<div class="tese">
+					<table>
+						<tr>
+							<th width="20%">课程模块</th>
+							<th width="15%">课时</th>
+							<th width="15%">价格（元）</th>
+							<th width="20%">查看课程</th>
+							<th width="30%">备注</th>
+						</tr>
+						<tr>
+							<td>行政职业能力测试</td>
+							<td>30</td>
+							<td>1000</td>
+							<td><a href="http://www.rongda100.com/front/homepage!showSellWayInfo.action?queryAssessCondition.currentPage=1&querySellWayCondition.sellId=556" target="_blank">点击试听课程</a></td>
+							<td rowspan="6">烟草行业综合知识不单独参与课程，<br />需要的同学可以询 问在线客服购买<br />事宜或电询：400-871-6661</td>
+						</tr>
+						<tr>
+							<td class="grey">公共基础、时政知识</td>
+							<td class="grey">19</td>
+							<td class="grey">1200</td>
+							<td class="grey"><a href="http://www.rongda100.com/front/homepage!showSellWayInfo.action?queryAssessCondition.currentPage=1&querySellWayCondition.sellId=557" target="_blank">点击试听课程</a></td>
+						</tr>
+						<tr>
+							<td>管理学基础</td>
+							<td>20</td>
+							<td>1200</td>
+							<td><a href="http://www.rongda100.com/front/homepage!showSellWayInfo.action?queryAssessCondition.currentPage=1&querySellWayCondition.sellId=558" target="_blank">点击试听课程</a></td>
+						</tr>
+						<tr>
+							<td class="grey">经济学基础</td>
+							<td class="grey">20</td>
+							<td class="grey">1000</td>
+							<td class="grey"><a href="http://www.rongda100.com/front/homepage!showSellWayInfo.action?queryAssessCondition.currentPage=1&querySellWayCondition.sellId=559" target="_blank">点击试听课程</a></td>
+						</tr>
+						<tr>
+							<td>专卖法及实施条例</td>
+							<td>7</td>
+							<td>600</td>
+							<td><a href="http://www.rongda100.com/front/homepage!showSellWayInfo.action?queryAssessCondition.currentPage=1&querySellWayCondition.sellId=355" target="_blank">点击试听课程</a></td>
+						</tr>
+						<tr>
+							<td class="grey">写作、公文知识</td>
+							<td class="grey">24</td>
+							<td class="grey">800</td>
+							<td class="grey"><a href="http://www.rongda100.com/front/homepage!showSellWayInfo.action?queryAssessCondition.currentPage=1&querySellWayCondition.sellId=560" target="_blank">点击试听课程</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--网络课程结束-->
+		<div class="title">
+			<h2>红云红河招聘考试经验分享级考试交流</h2>
+			<a></a>
+		</div>
+		<div class="jiaoliu">
+			<div class="weixin">
+				<h3>微信公众平台：</h3>
+				<div class="weixinMain">
+					<p>融大教育微信公众号RongDajy<br />
+					<a>最新、最全面</a>的烟草系统招聘信息汇总<br />
+					招聘简章、招考资讯、笔试备考、面试备考、<br />
+					经验交流、政策信息一网打尽</p>
+					<img src="images/ewm.png" />
+				</div>
+			</div>
+			<div class="weixin qun">
+				<h3>红云红河集团招聘考试交流：</h3>
+				<div class="weixinMain">
+					<ul>
+						<li>昆明卷烟厂招聘考试交流群：<a href="http://jq.qq.com/?_wv=1027&k=296fWlU" target="_blank">209065077</a></li>
+						<li>曲靖卷烟厂招聘考试交流群：<a href="http://jq.qq.com/?_wv=1027&k=2L4AgBR" target="_blank">271268439</a></li>
+						<li>红河卷烟厂招聘考试交流群：<a href="http://jq.qq.com/?_wv=1027&k=2FAhVs7" target="_blank">133508464</a></li>
+						<li>会泽卷烟厂招聘考试交流群：<a href="http://jq.qq.com/?_wv=1027&k=2EM9Tp5" target="_blank">251447684</a></li>
+						<li>红云红河集团招聘考试交流群：<a href="http://jq.qq.com/?_wv=1027&k=2JZ8Rbi" target="_blank">225457807</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="baoming">
+			<a href="http://www.yancaozp.com/bm.asp" target="_blank">
+				<div class="baomingC">
+					<h3>在线预约报名</h3>
+					<ul>
+						<li><img src="images/icon01.png" /><p>预约电话咨询</p></li>
+						<li><img src="images/icon02.png" /><p>预约现场咨询</p></li>
+						<li><img src="images/icon03.png" /><p>预约现场免费试听</p></li>
+					</ul>
+				</div>
+			</a>
+		</div>
+		<!--网络课程结束-->
+		<div class="contact">
+			<div class="contactC">
+				<h2>报名地址</h2>
+				<div class="adress">
+					<h3>◆ 昆明总部地址</h3>
+					<p>昆明市金碧路26号大德大厦11楼融大教育。</p>
+					<h3>◆ 乘车线路</h3>
+					<h4>线路一：</h4>
+					<p>A1路、4路、62路、73路、90路、98路、213路至得胜桥金碧路站下车，往青年路方向走500米即到。</p>
+					<h4>线路二：</h4>
+					<p>76路、112路、129路、63路、A2路、207路至得胜桥青年路站下车，往金碧路方向走500米即到。</p>
+					<h4>线路三：</h4>
+					<p>乘坐地铁2号线至塘子巷站下车，从E口出至北京路与拓东路交叉口，往金碧路方向步行500米即到。</p>
+				</div>
+				<div class="map" id="map1">
+					
+				</div>
+			</div>
+		</div>
+		<div class="ban02">
+			<img src="images/banner02.jpg" />
+		</div>
+		<div class="navBottom">
+			<div class="navbottomC">
+				<p><a href="http://www.yancaozp.com/index.asp" target="_blank">首页</a><a>|</a>
+					<a href="http://www.yancaozp.com/pnews.asp?bsortid=1" target="_blank">招考快讯</a><a>|</a>
+					<a href="http://www.yancaozp.com/news.asp?sortid=1&lid=3" target="_blank">培训动态</a><a>|</a>
+					<a href="http://www.yancaozp.com/pnews.asp?bsortid=3" target="_blank">培训课程</a><a>|</a>
+					<a href="http://www.yancaozp.com/sz.asp?bsortid=4" target="_blank">师资团队</a><a>|</a>
+					<a href="http://www.yancaozp.com/bm.asp" target="_blank">网上报名</a><a>|</a>
+					<a href="http://www.rongda100.com/front/homepage!showSellWayList.action?querySellWayCondition.currentPage=1&querySellWayCondition.subjectId=131&querySellWayCondition.teacher=&querySellWayCondition.order=1&querySellWayCondition.nameOrSeNameOrSubName=" target="_blank">资料购买</a><a>|</a>
+					<a href="http://www.yancaozp.com/about.asp" target="_blank">关于我们</a><a>|</a>
+					<a href="http://www.yancaozp.com/contact.asp" target="_blank">联系我们</a></p>
+			</div>
+		</div>
+		<div class="connact">
+			<p>地址：昆明市金碧路26号大德大厦11楼融大教育（金碧路与青年路交汇处，金碧路得胜桥旁）</p>
+			<p>电话：400-871-6661 传真：0871-65238043 联系人：李老师老师 手机：15887821166</p>
+		</div>
+	</body>
+</html>
